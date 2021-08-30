@@ -2,7 +2,6 @@
     "theme_color": "white",
     "background_color": "plum",
     "display": "fullscreen",
-    "scope": "https://ryanguitar.github.io/background",
     "start_url": "index.html",
     "name": "Simpsons clickable",
     "short_name": "Simpsons",
