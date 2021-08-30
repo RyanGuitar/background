@@ -1,125 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background Test</title>
-    <style>
-        body {
-            box-sizing: border-box;
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-        }
-        #outer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height:100vh;
-            width:100vw;
-        }
-        #inner {
-            /*width:739px;*/
-            width:1000px;
-            height:auto;
-        }
-
-        #container {
-            position:relative;
-            top:0;
-            left:0;
-            aspect-ratio: 739/415;
-            max-width:1000px;
-            height:auto;
-           /* max-width:739px;
-            max-height:415px;*/
-        }
-
-        #background {
-            position:absolute;
-            top:0;
-            left:0;
-            width:100%;
-            height:auto;
-        }
-        #homer {
-            position:absolute;
-            top:65%;
-            left:80%;
-            transform:translate(-50%, -50%);
-            width:35%;
-            height:auto;
-        }
-        #bart {
-            position:absolute;
-            top:70%;
-            left:40%;
-            transform:translate(-50%, -50%);
-            width:25%;
-            height:auto; 
-        }
-        #lisa {
-            position:absolute;
-            top:55%;
-            left:15%;
-            transform:translate(-50%, -50%);
-            width:13%;
-            height:auto; 
-        }
-        #dog {
-            position:absolute;
-            top:58%;
-            left:58%;
-            transform:translate(-50%, -50%);
-            width:15%;
-            height:auto; 
-        }
-        .hide {
-            display:none;
-        }
-        .faded {
-            opacity:0;
-        }
-    </style>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div id="outer">
         <div id="inner">
             <div id="container" width="739" height="415">
-                <img src="background.jpeg" id="background">
-                <img src="homer.webp" id="homer" width="100" height="100" class="simpson hide">
-                <img src="bart.webp" id="bart" width="100" height="100" class="simpson hide">
-                <img src="lisa.webp" id="lisa" width="100" height="100" class="simpson hide">
-                <img src="dog.webp" id="dog" width="100" height="100" class="simpson hide">
+                <img src="images/background.jpeg" id="background">
+                <img src="images/homer.webp" id="homer" width="100" height="100" class="simpson hide">
+                <img src="images/bart.webp" id="bart" width="100" height="100" class="simpson hide">
+                <img src="images/lisa.webp" id="lisa" width="100" height="100" class="simpson hide">
+                <img src="images/dog.webp" id="dog" width="100" height="100" class="simpson hide">
             </div>
        </div>
     </div> 
 </body>
 
-<script>
-    function getId (id){
-        return document.getElementById(id)
-    }
-
-    function fadeInOut (e){
-        if (e.target.classList[0] == 'simpson'){
-            e.target.classList.toggle('faded')
-        }
-    }
-
-    window.onload = () => {
-        getId('container').addEventListener(('click'), (e) => fadeInOut(e))
-        document.querySelectorAll('.simpson').forEach((character) => {
-            character.classList.remove('hide')
-        })
-      /*  getId('homer').classList.remove('hide')
-        getId('bart').classList.remove('hide')
-        getId('lisa').classList.remove('hide')
-        getId('dog').classList.remove('hide')*/
-    }
-</script>
+<script src="main.js"></script>
 
 </html>
