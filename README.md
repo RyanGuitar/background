@@ -1,3 +1,4 @@
 # background
-A responsive background with fixed position characters with clickable functionality.
-<img src="https://ryanguitar.github.io/background/images/background.jpeg">
+A responsive background with fixed position characters that have clickable functionality.
+Click on Simpsons to make them disappear and reappear.
+<img src="https://ryanguitar.github.io/background/example.jpeg">
