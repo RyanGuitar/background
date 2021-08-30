@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Test</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+        #outer {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width:100vw;
+            height:100vh;
+        }
+
+        #container {
+            position:relative;
+            top:0;
+            left:0;
+            aspect-ratio: 739/415;
+            width:900px;
+            height:auto;
+        }
+
+        #background {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:auto;
+        }
+        #homer {
+            position:absolute;
+            top:60%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            width:15%;
+            height:auto;
+        }
+        .hide {
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner">
+            <div id="container" width="739" height="415" class="hide">
+                <img src="background.jpeg" id="background" class="hide">
+                <img src="homer.webp" id="homer" width="100" height="100" class="hide">
+            </div>
+        </div>
+    </div>
+    
+        
+</body>
+
+<script>
+    window.onload = () => {
+        document.getElementById('container').classList.remove('hide')
+        document.getElementById('background').classList.remove('hide')
+        document.getElementById('homer').classList.remove('hide')
+    }
+</script>
+
+</html>
